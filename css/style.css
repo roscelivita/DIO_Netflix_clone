@@ -1,0 +1,211 @@
+/* criar variáveis para guardar cores da identidade visual do site */
+:root{
+    --vermelho: #E50914;
+    --preta: #141414;
+}
+
+/* resetar */
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+   /*  border: rosybrown 1px solid; */
+}
+
+
+body{
+    background: var(--preta);
+    font-family:  Helvetica, Arial, sans-serif;
+    color: #fff;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    z-index: 10;
+}
+
+.hearder-background{
+    background: linear-gradient(rgba(0, 0, 0, 0.8) , rgba(0, 0, 0, 0)100%);
+}
+
+.menu-scroll{
+    background-color: var(--preta);
+}
+
+.cabecalho {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container{
+    max-width: 95vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.logo{
+    color: var(--vermelho);
+    font-size: 35   px;
+}
+
+.nav-categorias a{
+    color: #AAA;
+    margin-right: 10px;
+}
+
+.nav-categorias a:hover{
+    color: #fff;
+}
+
+
+/* filme principal - banner */
+.filme-principal{
+    font-size: 16px;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.8) , rgba(0, 0, 0, 0)100%), url("../img/capa-house.jpg");
+    background-size: cover;
+    height: 500px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.filme-principal .descricao{
+    margin-bottom: 40px;
+    max-width: 45%;
+    margin-top: 15px;
+}
+
+.filme-principal h3{
+    font-size: 40px;
+    margin-top: 5%;
+}
+
+.banner-botoes button{
+    background-color: #fff;
+    border: none;
+    padding:  10px 30px;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: 0.3s ease all;
+}
+
+.banner-botoes button i{
+    margin-right: 10px;
+}
+
+.banner-botoes button:nth-child(2){
+    margin-left: 10px;
+    background-color: rgba(80, 80, 80, 0.7);
+    color: #fff;
+}
+
+.banner-botoes button:nth-child(1):hover{
+    background-color: rgb(160, 160, 160);
+}
+
+.banner-botoes button:nth-child(2):hover{
+    background-color: rgba(80, 80, 80, 0.4);
+}
+
+
+/* carrosel de filmes */
+
+.box-filme{
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+h4{
+    font-weight: lighter;
+    margin: 10px 0;
+}
+
+/* FOOTER */
+footer{
+    color: rgb(109, 109, 109);
+    font-size: 14px;
+    max-width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1em;
+    margin-top: 80px;
+    margin-bottom: 20px;
+}
+
+footer a{
+    text-decoration: none ;
+    color: rgb(109, 109, 109);
+}
+
+.redes-sociais a{
+    font-size: 34px;
+    margin-right: 20px;
+}
+
+.nav-footer{
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    
+}
+
+.nav-footer a{
+    width: 25%;
+
+}
+.cod-servico{
+    display: inline-block;
+    border: 1px solid rgb(109, 109, 109);
+    padding: 8px 12px;
+    margin: 15px 0;
+}
+.cod-servico:hover{
+    color: #fff;
+    font-weight: lighter;
+}
+
+.owl-nav > button > span {
+    font-size: 50px !important;
+    height: fit-content;
+    line-height: normal;
+    font-family: Arial;
+    
+}
+.owl-nav > button{
+    margin: 0 !important;
+    height: fit-content;
+}
+
+/* media queries */
+@media screen and (max-width:700px){
+    header .container{
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width:900px){
+    .nav-footer a{
+        width: 33.333%;    
+    }
+
+    footer{
+        max-width: 90vw;
+    }
+}
+
+@media screen and (max-width:800px){
+    .nav-footer a{
+        width: 50%;
+    
+    }
+}
